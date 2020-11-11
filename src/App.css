@@ -1,0 +1,18 @@
+.html {
+  outline: none;
+}
+
+.cardAction {
+  outline: none;
+}
+
+.zoom {
+  outline: none;
+  transition: ease-in-out 0.05s;
+  outline: none;
+}
+
+.zoom:hover {
+  transform: scale(1.08);
+  text-shadow: #444444 0px 2px 18px;
+}

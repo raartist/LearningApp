@@ -1,0 +1,24 @@
+.background {
+  /* background: url(bg.jpg) no-repeat; */
+  /* background-color: bisque; */
+  width: 100%;
+  height: 700px;
+
+  background: linear-gradient(
+    0deg,
+    rgb(219, 200, 176) 15%,
+    rgb(201, 177, 129) 30%,
+    rgb(235, 205, 146) 87%
+  );
+  background-position: fixed;
+}
+
+.bg-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tile {
+  margin: "8px";
+}
