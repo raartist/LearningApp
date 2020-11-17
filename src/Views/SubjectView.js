@@ -19,11 +19,12 @@ export class SubjectView extends Component {
       <div>
         <div className="video__container">
           <div className="video">
-            <ReactPlayer
+            {/* <ReactPlayer
               url="https://youtu.be/cgB68TlynRo"
               controls
               playing
-            ></ReactPlayer>
+            ></ReactPlayer> */}
+            subject view
           </div>
         </div>
         <div className="video__title">

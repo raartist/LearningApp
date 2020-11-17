@@ -53,68 +53,34 @@ export class Home extends Component {
           src: "yoga.jpg",
         },
       ],
+      subjectView: false,
     };
   }
+  handleView = () => {
+    this.setState({
+      subjectView: true,
+    });
+  };
 
   render() {
     const Subject = this.state.subjects;
+    const subjectView = this.state.subjectView;
     return (
       <div>
-        {Subject.map((item, index) => (
-          <Grid container style={{ display: "flex" }} spacing={2}>
-            <Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-              <Link to={"/" + item.linkTo + "/view"}>
+        <div>
+          {Subject.map((item, index) => (
+            <Grid container spacing={2}>
+              <Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
+                <Link to={"/" + item.linkTo}>
+                  <Tile src={item.src} title={item.title} desc={item.desc} />
+                </Link>
+              </Grid>
+              <Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
                 <Tile src={item.src} title={item.title} desc={item.desc} />
-              </Link>
+              </Grid>
             </Grid>
-
-            {/* <Grid item xs={6} lg={3}>
-          <Link to="/chemistry">
-            <Tile
-              src="chemistry.jpg"
-              title="Chemisty"
-              Desc="Our latest and interactive..."
-            />
-          </Link>
-        </Grid>
-        <Grid item xs={6} lg={3}>
-          <Link to="/biology">
-            <Tile
-              src="biology.jpg"
-              title="Biology"
-              Desc="Our latest and interactive..."
-            />
-          </Link>
-        </Grid>
-        <Grid item xs={6} lg={3}>
-          <Link to="/maths">
-            <Tile
-              src="maths.jpg"
-              title="Maths"
-              Desc="Our latest and interactive..."
-            />
-          </Link>
-        </Grid>
-        <Grid item xs={6} lg={3}>
-          <Link to="/computer">
-            <Tile
-              src="computer.jpg"
-              title="Computer"
-              Desc="Our latest and interactive..."
-            />
-          </Link>
-        </Grid>
-        <Grid item xs={6} lg={3}>
-          <Link to="/yoga">
-            <Tile
-              src="yoga.jpg"
-              title="Yoga"
-              Desc="Our latest and interactive..."
-            />
-          </Link>
-        </Grid> */}
-          </Grid>
-        ))}
+          ))}
+        </div>
       </div>
     );
   }

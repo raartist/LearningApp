@@ -64,6 +64,7 @@ function ResponsiveDrawer(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [navText, setNavText] = React.useState("Learn o graph");
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -121,7 +122,7 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Learn O Graph
+            {navText}
           </Typography>
         </Toolbar>
       </AppBar>

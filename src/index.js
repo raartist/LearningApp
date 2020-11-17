@@ -35,7 +35,6 @@ ReactDOM.render(
           <Route path="/maths" component={Maths} />
           <Route path="/computer" component={Computer} />
           <Route path="/yoga" component={Yoga} />
-          <Route path={"/physics/view"} component={SubjectView} />
         </Switch>
       </div>
     </BrowserRouter>
